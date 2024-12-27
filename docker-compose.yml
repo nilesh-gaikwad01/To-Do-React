@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  react-app:
+    image: react-app:latest # Name your Docker image
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80" # Map port 3000 to the container's port 80
+    restart: always
